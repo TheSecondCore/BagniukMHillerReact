@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 30;
+}
+
+.List {
+  background: #d65a31;
+  padding: 1px;
+}
+
+.List ul div{
+  color: white;
+  margin: 20px;
+  padding: 10px;
+  background: #151515;
+  margin-bottom: 5px;
+}
+
+.App {
+  background: #d65a31;
+  margin: 15px;
+}
+
+.App button {
+  color: white;
+  background: #2c2c2c;
+  border: none;
+}
+
+
+.List ul div button{  
+  color: white;
+  display: inline-block;
+  background: #2c2c2c;
+  border: none;
+  padding: 4px;
+  float: right;
+}
+
+.List ul {
+  padding-left: 0px;
+}
