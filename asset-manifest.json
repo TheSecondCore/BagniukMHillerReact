@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BagniukMHillerReact/static/css/main.adcdc6a7.chunk.css",
+    "main.js": "/BagniukMHillerReact/static/js/main.b62c5d7e.chunk.js",
+    "main.js.map": "/BagniukMHillerReact/static/js/main.b62c5d7e.chunk.js.map",
+    "runtime~main.js": "/BagniukMHillerReact/static/js/runtime~main.948cbd6f.js",
+    "runtime~main.js.map": "/BagniukMHillerReact/static/js/runtime~main.948cbd6f.js.map",
+    "static/js/2.164617b5.chunk.js": "/BagniukMHillerReact/static/js/2.164617b5.chunk.js",
+    "static/js/2.164617b5.chunk.js.map": "/BagniukMHillerReact/static/js/2.164617b5.chunk.js.map",
+    "index.html": "/BagniukMHillerReact/index.html",
+    "precache-manifest.a460b1d6a7d3f9e07c07b6436caa2da6.js": "/BagniukMHillerReact/precache-manifest.a460b1d6a7d3f9e07c07b6436caa2da6.js",
+    "service-worker.js": "/BagniukMHillerReact/service-worker.js",
+    "static/css/main.adcdc6a7.chunk.css.map": "/BagniukMHillerReact/static/css/main.adcdc6a7.chunk.css.map"
+  }
+}
