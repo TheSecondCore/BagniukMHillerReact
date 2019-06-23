@@ -40,10 +40,10 @@
 
 .List ul div button{  
   color: white;
-  display: inline-block;
   background: #2c2c2c;
   border: none;
   padding: 4px;
+  float: left;
 }
 
 .List ul {
