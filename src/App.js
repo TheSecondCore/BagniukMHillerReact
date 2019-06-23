@@ -76,13 +76,14 @@ export default class App extends Component {
 
     return (
 
-      <div>
+      <div style={{textAlign: 'center'}}>
         <form className="App" onSubmit={this.onSubmit}>
           <input value={this.state.inputField} onChange={this.onChange} />
           <button>Submit</button>
           <hr />
           <button onClick={this.fetchJSON}>Load 10 random placeholder posts from JSONplaceholder</button>
         </form>
+        <br/>
         <div className="List">
           <ul>
             {this.state.items.map((item, index) =>

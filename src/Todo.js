@@ -40,7 +40,12 @@ export default class Todo extends React.Component {
                 </li>
                 <button onClick={this.props.onDelete}>X</button>
                 <button onClick={this.startEdit} style={hideWhenEditing}>Edit</button>
-                <input onChange={this.onChange} placeholder={this.props.item} style={showWhenEditing} type="text" />
+                <input 
+                    onChange={this.onChange} 
+                    placeholder={this.props.item} 
+                    style={showWhenEditing} 
+                    type="text"
+                    onKeyDown={(e) => (e.key === 'Enter' ? this.confirmEdit(e) : null)}  />
                 <button onClick={this.confirmEdit} style={showWhenEditing}>Confirm</button>
             </div>
         )

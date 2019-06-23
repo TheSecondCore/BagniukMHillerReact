@@ -1,4 +1,7 @@
 .App {
+  display: inline-block;
+  min-width: 500px;
+  max-width: 500px;
   text-align: center;
   padding: 10px;
   margin: 10px;
@@ -7,6 +10,10 @@
 }
 
 .List {
+  display: inline-block;
+  min-width: 500px;
+  max-width: 500px;
+  text-align: center;
   background: #d65a31;
   padding: 1px;
 }
