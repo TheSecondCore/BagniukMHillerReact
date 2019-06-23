@@ -1,25 +1,26 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import './App.css'
-import List from './List'
+import Todo from './Todo'
+
 
 export default class App extends Component {
 
-  constructor(){
+  constructor() {
     super()
     this.state = {
-      inputField : '',
-      items : [],
+      inputField: '',
+      items: [],
     }
   }
 
   onChange = (e) => {
-    this.setState({inputField: e.target.value})
+    this.setState({ inputField: e.target.value })
   }
 
   onSubmit = (e) => {
     e.preventDefault()
     this.setState({
-      inputField : '',
+      inputField: '',
       items: [...this.state.items, this.state.inputField]
     }, () => {
       localStorage.setItem('items', JSON.stringify(this.state.items))
@@ -40,15 +41,15 @@ export default class App extends Component {
     let newItems = this.state.items
     newItems.splice(e.target.parentNode.getAttribute('data-index'), 1)
     this.setState({
-      items : newItems
+      items: newItems
     }, () => {
       localStorage.setItem('items', JSON.stringify(this.state.items))
     })
   }
 
-  componentDidMount () {
+  componentDidMount() {
     if (localStorage.getItem('items') !== null) {
-      this.setState({items : JSON.parse(localStorage.getItem('items'))})
+      this.setState({ items: JSON.parse(localStorage.getItem('items')) })
     }
   }
 
@@ -59,30 +60,38 @@ export default class App extends Component {
       fetch('https://jsonplaceholder.typicode.com/todos/' + randomNumber)
         .then(response => {
           response.json()
-          .then(data =>{
-            this.setState({
-              items : [...this.state.items, data["title"]]
-            }, () => {
-              localStorage.setItem('items', JSON.stringify(this.state.items))
+            .then(data => {
+              this.setState({
+                items: [...this.state.items, data["title"]]
+              }, () => {
+                localStorage.setItem('items', JSON.stringify(this.state.items))
+              })
             })
-          })
         })
         .catch(error => console.log("There was an error with the fetch request: ", error))
     }
   }
 
+  render() {
 
-  render () {
-    return(
+    let items = this.state.items.map((item, index) =>
+      <li><Todo key={index} editChild={this.editChild} index={index} item={item} onDelete={this.onDelete} /></li>
+    )
+
+    return (
 
       <div>
         <form className="App" onSubmit={this.onSubmit}>
           <input value={this.state.inputField} onChange={this.onChange} />
           <button>Submit</button>
-          <hr></hr>
+          <hr />
           <button onClick={this.fetchJSON}>Load 10 random placeholder posts from JSONplaceholder</button>
         </form>
-        <List items={this.state.items} editChild={this.editChild} onDelete={this.onDelete} />
+        <div className="List">
+          <ul>
+            {items}
+          </ul>
+        </div>
       </div>
 
     )
