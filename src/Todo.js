@@ -30,12 +30,14 @@ export default class Todo extends React.Component {
 
     render() {
 
-        let hideWhenEditing = { display: (this.state.isBeingEdited ? "none" : "") }
-        let showWhenEditing = { display: (this.state.isBeingEdited ? "" : "none") }
+        const hideWhenEditing = { display: (this.state.isBeingEdited ? "none" : "") }
+        const showWhenEditing = { display: (this.state.isBeingEdited ? "" : "none") }
 
         return (
             <div data-index={this.props.index}>
-                <li style={hideWhenEditing}>{this.props.item}</li>
+                <li style={hideWhenEditing}>
+                    {this.props.item}
+                </li>
                 <button onClick={this.props.onDelete}>X</button>
                 <button onClick={this.startEdit} style={hideWhenEditing}>Edit</button>
                 <input onChange={this.onChange} placeholder={this.props.item} style={showWhenEditing} type="text" />

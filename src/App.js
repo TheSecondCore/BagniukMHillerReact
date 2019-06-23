@@ -74,10 +74,6 @@ export default class App extends Component {
 
   render() {
 
-    let items = this.state.items.map((item, index) =>
-      <li><Todo key={index} editChild={this.editChild} index={index} item={item} onDelete={this.onDelete} /></li>
-    )
-
     return (
 
       <div>
@@ -89,7 +85,14 @@ export default class App extends Component {
         </form>
         <div className="List">
           <ul>
-            {items}
+            {this.state.items.map((item, index) =>
+              <Todo
+                key={index}
+                editChild={this.editChild}
+                index={index}
+                item={item}
+                onDelete={this.onDelete} />
+            )}
           </ul>
         </div>
       </div>
