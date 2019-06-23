@@ -26,9 +26,19 @@ export default class App extends Component {
     })
   }
 
+  editChild = (index, newValue) => {
+    let newItems = this.state.items
+    newItems[index] = newValue
+    this.setState({
+      items: newItems
+    }, () => {
+      localStorage.setItem('items', JSON.stringify(this.state.items))
+    })
+  }
+
   onDelete = (e) => {
     let newItems = this.state.items
-    newItems.splice(e.target.getAttribute('data-key'),1)
+    newItems.splice(e.target.parentNode.getAttribute('data-index'), 1)
     this.setState({
       items : newItems
     }, () => {
@@ -72,7 +82,7 @@ export default class App extends Component {
           <hr></hr>
           <button onClick={this.fetchJSON}>Load 10 random placeholder posts from JSONplaceholder</button>
         </form>
-        <List items={this.state.items} onDelete={this.onDelete} />
+        <List items={this.state.items} editChild={this.editChild} onDelete={this.onDelete} />
       </div>
 
     )

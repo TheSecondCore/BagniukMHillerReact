@@ -1,15 +1,12 @@
 import React from 'react'
+import Todo from './Todo'
 
 const List = (props) => (
     <div className="List">
     <ul>
       {
         props.items.map((item, index) => 
-            <div key={index}>
-                <li>{item}</li>
-                <button data-key={index} onClick={props.onDelete}>X</button>
-                <button data-key={index}>Edit</button>
-            </div>
+            <Todo key={index} editChild={props.editChild} index={index} item={item} onDelete={props.onDelete} />
         )
       }
     </ul>
