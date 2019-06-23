@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/BagniukMHillelReact/static/css/main.3f950f72.chunk.css",
+    "main.css": "/BagniukMHillelReact/static/css/main.72bbf852.chunk.css",
     "main.js": "/BagniukMHillelReact/static/js/main.63d7ec98.chunk.js",
     "main.js.map": "/BagniukMHillelReact/static/js/main.63d7ec98.chunk.js.map",
     "runtime~main.js": "/BagniukMHillelReact/static/js/runtime~main.e7967e62.js",
@@ -8,8 +8,8 @@
     "static/js/2.a5adb38c.chunk.js": "/BagniukMHillelReact/static/js/2.a5adb38c.chunk.js",
     "static/js/2.a5adb38c.chunk.js.map": "/BagniukMHillelReact/static/js/2.a5adb38c.chunk.js.map",
     "index.html": "/BagniukMHillelReact/index.html",
-    "precache-manifest.0fa424fbac17e11516d2b1001c298e6b.js": "/BagniukMHillelReact/precache-manifest.0fa424fbac17e11516d2b1001c298e6b.js",
+    "precache-manifest.ad006d4c4cf204def87cee797a6d0ee6.js": "/BagniukMHillelReact/precache-manifest.ad006d4c4cf204def87cee797a6d0ee6.js",
     "service-worker.js": "/BagniukMHillelReact/service-worker.js",
-    "static/css/main.3f950f72.chunk.css.map": "/BagniukMHillelReact/static/css/main.3f950f72.chunk.css.map"
+    "static/css/main.72bbf852.chunk.css.map": "/BagniukMHillelReact/static/css/main.72bbf852.chunk.css.map"
   }
 }
