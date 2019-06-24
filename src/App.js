@@ -54,17 +54,21 @@ export default class App extends Component {
     }
   }
 
-  fetchJSON = async (e) => {
+  fetchJSON = (e) => {
     e.preventDefault()
     for (let i = 0; i < 10; i++) {
-      let randomNumber = Math.floor(Math.random() * 200 + 1)
-      let response = await fetch('https://jsonplaceholder.typicode.com/todos/' + randomNumber)
-      let data = await response.json()
-      this.setState({
-        items: [...this.state.items, data["title"]]
-      }, () => {
-        localStorage.setItem('items', JSON.stringify(this.state.items))
-      })
+      const randomNumber = Math.floor(Math.random() * 200 + 1)
+      const promise = fetch('https://jsonplaceholder.typicode.com/todos/' + randomNumber)
+      promise
+        .then(res => res.json())
+        .then(data => 
+          this.setState({
+            items: [...this.state.items, data.title]
+          }, () => {
+            localStorage.setItem('items', JSON.stringify(this.state.items))
+          })
+        )
+      .catch(error => "There was an error with the Fetch request: " + error)
     }
   }
 
