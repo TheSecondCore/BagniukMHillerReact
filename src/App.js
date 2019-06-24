@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
 import Todo from './Todo'
-import { async } from 'q';
 
 
 export default class App extends Component {
