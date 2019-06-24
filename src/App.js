@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Todo from './Todo'
+import { async } from 'q';
 
 
 export default class App extends Component {
@@ -53,22 +54,17 @@ export default class App extends Component {
     }
   }
 
-  fetchJSON = (e) => {
+  fetchJSON = async (e) => {
     e.preventDefault()
     for (let i = 0; i < 10; i++) {
       let randomNumber = Math.floor(Math.random() * 200 + 1)
-      fetch('https://jsonplaceholder.typicode.com/todos/' + randomNumber)
-        .then(response => {
-          response.json()
-            .then(data => {
-              this.setState({
-                items: [...this.state.items, data["title"]]
-              }, () => {
-                localStorage.setItem('items', JSON.stringify(this.state.items))
-              })
-            })
-        })
-        .catch(error => console.log("There was an error with the fetch request: ", error))
+      let response = await fetch('https://jsonplaceholder.typicode.com/todos/' + randomNumber)
+      let data = await response.json()
+      this.setState({
+        items: [...this.state.items, data["title"]]
+      }, () => {
+        localStorage.setItem('items', JSON.stringify(this.state.items))
+      })
     }
   }
 
