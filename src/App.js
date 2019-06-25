@@ -19,12 +19,14 @@ export default class App extends Component {
 
   onSubmit = (e) => {
     e.preventDefault()
-    this.setState({
-      inputField: '',
-      items: [...this.state.items, this.state.inputField]
-    }, () => {
-      localStorage.setItem('items', JSON.stringify(this.state.items))
-    })
+    if (this.state.inputField !== '') {
+      this.setState({
+        inputField: '',
+        items: [...this.state.items, this.state.inputField]
+      }, () => {
+        localStorage.setItem('items', JSON.stringify(this.state.items))
+      })
+    }
   }
 
   editChild = (index, newValue) => {

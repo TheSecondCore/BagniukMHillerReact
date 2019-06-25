@@ -6,12 +6,13 @@ export default class Todo extends React.Component {
         super(props)
         this.state = {
             isBeingEdited: false,
-            editField: null,
+            editField: '',
         }
     }
 
     startEdit = () => {
         this.setState({
+            editField: '',
             isBeingEdited: true
         })
     }
@@ -22,9 +23,14 @@ export default class Todo extends React.Component {
 
     confirmEdit = (e) => {
         e.preventDefault()
-        if (this.state.editField !== null) {
+        if (this.state.editField !== '') {
             this.props.editChild(e.target.parentNode.getAttribute('data-index'), this.state.editField)
         }
+        this.setState({ isBeingEdited: false })
+    }
+
+    cancelEdit = (e) => {
+        this.setState({ editField: '' })
         this.setState({ isBeingEdited: false })
     }
 
@@ -35,17 +41,17 @@ export default class Todo extends React.Component {
 
         return (
             <div data-index={this.props.index}>
-                <li style={hideWhenEditing}>
+                <li style={hideWhenEditing} onClick={this.startEdit}>
                     {this.props.item}
                 </li>
-                <button onClick={this.props.onDelete}>X</button>
+                <button onClick={(this.state.isBeingEdited ? this.cancelEdit : this.props.onDelete)}>X</button>
                 <button onClick={this.startEdit} style={hideWhenEditing}>Edit</button>
-                <input 
-                    onChange={this.onChange} 
-                    placeholder={this.props.item} 
-                    style={showWhenEditing} 
+                <input
+                    onChange={this.onChange}
+                    placeholder={this.props.item}
+                    style={showWhenEditing}
                     type="text"
-                    onKeyDown={(e) => (e.key === 'Enter' ? this.confirmEdit(e) : null)}  />
+                    onKeyDown={(e) => (e.key === 'Enter' ? this.confirmEdit(e) : null)} />
                 <button onClick={this.confirmEdit} style={showWhenEditing}>Confirm</button>
             </div>
         )
