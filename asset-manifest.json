@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/BagniukMHillelReact/static/css/main.334c5bfe.chunk.css",
-    "main.js": "/BagniukMHillelReact/static/js/main.334e69fb.chunk.js",
-    "main.js.map": "/BagniukMHillelReact/static/js/main.334e69fb.chunk.js.map",
+    "main.js": "/BagniukMHillelReact/static/js/main.03483529.chunk.js",
+    "main.js.map": "/BagniukMHillelReact/static/js/main.03483529.chunk.js.map",
     "runtime~main.js": "/BagniukMHillelReact/static/js/runtime~main.e7967e62.js",
     "runtime~main.js.map": "/BagniukMHillelReact/static/js/runtime~main.e7967e62.js.map",
     "static/js/2.a5adb38c.chunk.js": "/BagniukMHillelReact/static/js/2.a5adb38c.chunk.js",
     "static/js/2.a5adb38c.chunk.js.map": "/BagniukMHillelReact/static/js/2.a5adb38c.chunk.js.map",
     "index.html": "/BagniukMHillelReact/index.html",
-    "precache-manifest.7275ddc11159cb2244cfacde60d4cd4d.js": "/BagniukMHillelReact/precache-manifest.7275ddc11159cb2244cfacde60d4cd4d.js",
+    "precache-manifest.973d5634804464a02af152eebf3232b4.js": "/BagniukMHillelReact/precache-manifest.973d5634804464a02af152eebf3232b4.js",
     "service-worker.js": "/BagniukMHillelReact/service-worker.js",
     "static/css/main.334c5bfe.chunk.css.map": "/BagniukMHillelReact/static/css/main.334c5bfe.chunk.css.map"
   }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a72a554b610d83626c892ca5acc23c70",
+    "revision": "5179ea5829d7be7eaa36e0a7b88b931a",
     "url": "/BagniukMHillelReact/index.html"
   },
   {
-    "revision": "e80706c63b9afe540427",
+    "revision": "21d7ae189dbdd41daec2",
     "url": "/BagniukMHillelReact/static/css/main.334c5bfe.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BagniukMHillelReact/static/js/2.a5adb38c.chunk.js"
   },
   {
-    "revision": "e80706c63b9afe540427",
-    "url": "/BagniukMHillelReact/static/js/main.334e69fb.chunk.js"
+    "revision": "21d7ae189dbdd41daec2",
+    "url": "/BagniukMHillelReact/static/js/main.03483529.chunk.js"
   },
   {
     "revision": "06e5ce216ace01a4955a",
