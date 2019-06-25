@@ -1,13 +1,10 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-export default class Todo extends React.Component {
+export default class Todo extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            isBeingEdited: false,
-            editField: '',
-        }
+    state = {
+        isBeingEdited: false,
+        editField: '',
     }
 
     startEdit = () => {
